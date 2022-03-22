@@ -1,8 +1,8 @@
 # frozen_string_literal: true
 
 Decidim.configure do |config|
-  config.application_name = "Cercles.coop"
-  config.mailer_sender = "notificacions@cercles.coop"
+  config.application_name = "SomConnexio.coop"
+  config.mailer_sender = "participa@somconnexio.coop"
 
   # Change these lines to set your preferred locales
   config.default_locale = :ca
