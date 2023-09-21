@@ -9,6 +9,9 @@ require "spec_helper"
 require "rspec/rails"
 # Add additional requires below this line. Rails is not loaded until this point!
 
+require "simplecov"
+SimpleCov.start "rails"
+
 require "decidim/dev"
 
 Decidim::Dev.dummy_app_path = File.expand_path(File.join(__dir__, ".."))

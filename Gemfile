@@ -4,40 +4,37 @@ source "https://rubygems.org"
 
 ruby RUBY_VERSION
 
-DECIDIM_VERSION = { github: "Platoniq/decidim", branch: "temp/0.24" }.freeze
+DECIDIM_VERSION = "0.26.8"
 
 gem "decidim", DECIDIM_VERSION
 gem "decidim-consultations", DECIDIM_VERSION
 
-gem "decidim-action_delegator"
-gem "decidim-decidim_awesome", "~> 0.7.0"
-gem "decidim-direct_verifications", "1.0.2"
-gem "decidim-term_customizer", github: "Platoniq/decidim-module-term_customizer", branch: "temp/0.24"
+gem "decidim-action_delegator", github: "coopdevs/decidim-module-action_delegator", branch: "main"
+gem "decidim-decidim_awesome", github: "decidim-ice/decidim-module-decidim_awesome", branch: "main"
+gem "decidim-term_customizer", github: "mainio/decidim-module-term_customizer", branch: "release/0.26-stable"
 
-gem "bootsnap", "~> 1.7"
+gem "bootsnap", "~> 1.3"
 
-gem "puma", "~> 5.3.2"
-gem "uglifier", "~> 4.1"
-# bug in version 1.9
-gem "i18n", "~> 1.8.1"
+gem "puma", ">= 5.0.0"
+
+gem "faker", "~> 2.14"
+
+gem "wicked_pdf", "~> 2.1"
 
 group :development, :test do
-  gem "byebug", "~> 11.1", platform: :mri
+  gem "byebug", "~> 11.0", platform: :mri
 
+  gem "brakeman"
   gem "decidim-dev", DECIDIM_VERSION
-  gem "faker", "~> 2.18"
   gem "rubocop-faker", "~> 1.0"
 end
 
 group :development do
-  gem "letter_opener_web", "~> 1.4"
-  gem "listen", "~> 3.5"
-  gem "memory_profiler"
-  gem "rack-mini-profiler"
-  gem "spring", "~> 2.1"
+  gem "letter_opener_web", "~> 1.3"
+  gem "listen", "~> 3.1"
+  gem "spring", "~> 2.0"
   gem "spring-watcher-listen", "~> 2.0"
-  gem "stackprof"
-  gem "web-console", "~> 3.5"
+  gem "web-console", "~> 4.0"
 
   gem "capistrano", "~> 3.14"
   gem "capistrano-bundler"
@@ -49,16 +46,7 @@ group :development do
 end
 
 group :production do
-  gem "barnes"
-  gem "dalli"
   gem "figaro", "~> 1.2"
-  gem "fog-aws"
-  gem "lograge"
-  gem "rack-timeout"
-  gem "scout_apm"
-  gem "sentry-rails"
-  gem "sentry-ruby"
-  gem "sentry-sidekiq"
-  gem "sidekiq"
-  gem "sidekiq-cron"
+  gem "sidekiq", "< 7"
+  gem "whenever", "~> 1.0"
 end
