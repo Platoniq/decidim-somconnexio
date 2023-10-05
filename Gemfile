@@ -13,7 +13,7 @@ gem "decidim-action_delegator", github: "coopdevs/decidim-module-action_delegato
 gem "decidim-decidim_awesome", github: "decidim-ice/decidim-module-decidim_awesome", branch: "main"
 gem "decidim-term_customizer", github: "mainio/decidim-module-term_customizer", branch: "release/0.26-stable"
 
-gem "bootsnap", "~> 1.3"
+gem "bootsnap", "~> 1.16"
 
 gem "puma", ">= 5.0.0"
 
