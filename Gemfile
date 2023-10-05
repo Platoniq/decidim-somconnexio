@@ -19,7 +19,7 @@ gem "puma", ">= 5.0.0"
 
 gem "faker", "~> 2.14"
 
-gem "wicked_pdf", "~> 2.1"
+gem "wicked_pdf", "~> 2.7"
 
 group :development, :test do
   gem "byebug", "~> 11.0", platform: :mri
