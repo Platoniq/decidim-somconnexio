@@ -48,3 +48,6 @@ coverage/
 
 config/deploy*
 Capfile
+
+public/sw.js
+public/sw.js.map
