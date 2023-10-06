@@ -8,3 +8,7 @@ every "3 3 * * *" do
   rake "decidim:delete_data_portability_files"
   rake "decidim:open_data:export"
 end
+
+every :day, at: "2:00am" do
+  rake "decidim:odoo:sync:members"
+end
