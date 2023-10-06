@@ -1107,6 +1107,21 @@ ActiveRecord::Schema.define(version: 2023_10_06_120421) do
     t.index ["decidim_user_id"], name: "index_decidim_notifications_on_decidim_user_id"
   end
 
+  create_table "decidim_odoo_users", force: :cascade do |t|
+    t.bigint "decidim_organization_id", null: false
+    t.bigint "decidim_user_id", null: false
+    t.integer "odoo_user_id"
+    t.string "ref"
+    t.boolean "coop_candidate", default: false
+    t.boolean "member", default: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["decidim_organization_id", "odoo_user_id"], name: "index_unique_odoo_user_and_organization", unique: true
+    t.index ["decidim_organization_id", "ref"], name: "index_unique_ref_and_organization", unique: true
+    t.index ["decidim_organization_id"], name: "index_odoo_users_on_decidim_organization_id"
+    t.index ["decidim_user_id"], name: "index_odoo_users_on_decidim_user_id"
+  end
+
   create_table "decidim_organizations", id: :serial, force: :cascade do |t|
     t.string "name", null: false
     t.string "host", null: false
@@ -1883,6 +1898,8 @@ ActiveRecord::Schema.define(version: 2023_10_06_120421) do
   add_foreign_key "decidim_editor_images", "decidim_users", column: "decidim_author_id"
   add_foreign_key "decidim_identities", "decidim_organizations"
   add_foreign_key "decidim_newsletters", "decidim_users", column: "author_id"
+  add_foreign_key "decidim_odoo_users", "decidim_organizations"
+  add_foreign_key "decidim_odoo_users", "decidim_users"
   add_foreign_key "decidim_participatory_process_steps", "decidim_participatory_processes"
   add_foreign_key "decidim_participatory_process_types", "decidim_organizations"
   add_foreign_key "decidim_participatory_processes", "decidim_organizations"
