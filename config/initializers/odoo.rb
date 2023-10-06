@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 Decidim::Odoo.configure do |config|
   # Configure api credentials
   config.api = {
