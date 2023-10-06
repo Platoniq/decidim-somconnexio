@@ -47,6 +47,6 @@ end
 
 group :production do
   gem "figaro", "~> 1.2"
-  gem "sidekiq", "< 7"
+  gem "sidekiq", "< 8"
   gem "whenever", "~> 1.0"
 end
