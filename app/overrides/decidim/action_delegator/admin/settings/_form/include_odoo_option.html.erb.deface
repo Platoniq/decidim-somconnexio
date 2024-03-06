@@ -1,0 +1,3 @@
+<!-- replace 'erb[loud]:contains("decidim.action_delegator.admin.settings.authorization_method")' -->
+
+<%= form.select :authorization_method, [:both, :phone, :email, :odoo].map { |op| [t(op, scope: "decidim.action_delegator.admin.settings.authorization_method"), op] } %>
