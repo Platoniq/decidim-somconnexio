@@ -11,6 +11,21 @@ checksums = [
     files: {
       "/app/views/layouts/decidim/_head_extra.html.erb" => "1b8237357754cf519f4e418135f78440"
     }
+  },
+  {
+    package: "decidim-action_delegator",
+    files: {
+      "/app/views/decidim/action_delegator/admin/settings/_form.html.erb" => "900447a24b3914d56de6ed53185f73d6",
+      "/app/controllers/decidim/action_delegator/verifications/delegations_verifier/authorizations_controller.rb" => "39257248025a42c3b1b8870ed31d3721",
+      "/app/models/decidim/action_delegator/setting.rb" => "242e32c4027fd47fd72e677db75da2f2",
+      "/lib/decidim/action_delegator/verifications/delegations_authorizer.rb" => "81879b0c3efeb0e0747d5d4e69c686c1"
+    }
+  },
+  {
+    package: "decidim-odoo",
+    files: {
+      "/app/forms/decidim/odoo/verifications/odoo_member.rb" => "c684eb68ca7582c150691250e99fa483"
+    }
   }
 ]
 

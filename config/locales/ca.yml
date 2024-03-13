@@ -1,8 +1,8 @@
 ---
-en:
+ca:
   decidim:
     action_delegator:
       admin:
         settings:
           authorization_method:
-            odoo: Only Odoo members
+            odoo: Només membres d'Odoo
