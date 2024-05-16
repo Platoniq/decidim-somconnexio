@@ -15,8 +15,9 @@ module Decidim
         end
 
         def after_sign_out_path_for(resource)
-          if @user.odoo_identity?
-            "https://oficinavirtual.somconnexio.coop"
+          url = ENV.fetch("ODOO_SIGN_OUT_URL", nil)
+          if @user.odoo_identity? && url
+            url
           else
             original_after_sign_out_path_for(resource)
           end
