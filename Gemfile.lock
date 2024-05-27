@@ -1,4 +1,13 @@
 GIT
+  remote: https://github.com/Platoniq/decidim-module-odoo.git
+  revision: 8ac928d84f124e2f17a289784908f9ae619fdfbf
+  branch: fix/login-with-multiple-locales
+  specs:
+    decidim-odoo (0.2.1)
+      decidim-core (>= 0.27.0, < 0.28)
+      omniauth-keycloak (~> 1.5)
+
+GIT
   remote: https://github.com/coopdevs/decidim-module-action_delegator.git
   revision: 9c77d21c298482bd8882b9a22579114e81c141ae
   branch: main
@@ -357,9 +366,6 @@ GEM
       decidim-core (= 0.27.4)
       decidim-forms (= 0.27.4)
       icalendar (~> 2.5)
-    decidim-odoo (0.2.1)
-      decidim-core (>= 0.27.0, < 0.28)
-      omniauth-keycloak (~> 1.5)
     decidim-pages (0.27.4)
       decidim-core (= 0.27.4)
     decidim-participatory_processes (0.27.4)
@@ -519,7 +525,7 @@ GEM
     invisible_captcha (0.13.0)
       rails (>= 3.2.0)
     json (2.6.3)
-    json-jwt (1.16.5)
+    json-jwt (1.16.6)
       activesupport (>= 4.2)
       aes_key_wrap
       base64
@@ -940,7 +946,7 @@ DEPENDENCIES
   decidim-consultations (= 0.27.4)
   decidim-decidim_awesome!
   decidim-dev (= 0.27.4)
-  decidim-odoo (~> 0.2.1)
+  decidim-odoo!
   decidim-term_customizer!
   deface
   faker (~> 2.14)
