@@ -11,7 +11,7 @@ gem "decidim-consultations", DECIDIM_VERSION
 
 gem "decidim-action_delegator", github: "coopdevs/decidim-module-action_delegator", branch: "main"
 gem "decidim-decidim_awesome", github: "decidim-ice/decidim-module-decidim_awesome", branch: "main"
-gem "decidim-odoo", github: "Platoniq/decidim-module-odoo", branch: "fix/login-with-multiple-locales"
+gem "decidim-odoo", "~> 0.2.2"
 gem "decidim-term_customizer", github: "mainio/decidim-module-term_customizer", branch: "master"
 
 gem "bootsnap", "~> 1.3"
