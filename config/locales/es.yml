@@ -9,18 +9,18 @@ es:
     admin:
       filters:
         coop_candidate_eq:
-          label: Es candidato a miembro
+          label: Es candidato a socio
           values:
             'false': 'No'
             'true': 'Sí'
         member_eq:
-          label: Es miembro
+          label: Es socio
           values:
             'false': 'No'
             'true': 'Sí'
     authorization_handlers:
       odoo_member:
-        explanation: Verificarse cuando el usuario es miembro o candidato a miembro en Odoo Get verified when the user is member or coop. candidate in Odoo
+        explanation: Verificar la condición societaria de la persona
         name: Miembro de Odoo
     odoo:
       admin:
@@ -29,17 +29,17 @@ es:
             actions: Acciones
             alias: Alias
             contact: Contacto
-            coop_candidate: Candidato a miembro
-            empty: No hay miembros de Odoo
+            coop_candidate: Candidato a socio
+            empty: No hay socios en la base de datos
             last_sync: Última sincronización
-            member: Miembro
+            member: Socio
             name: Nombre
             odoo_id: Odoo ID
             ref: Ref
             show_email: Mostrar email
             sync: Sincronizar con Odoo
             sync_all: Sincronizar todo con Odoo
-            title: Miembros de Odoo
+            title: Socios en Odoo
           sync:
             success: La sincronización ha comenzado. Puede llevar varios minutos
       errors:
